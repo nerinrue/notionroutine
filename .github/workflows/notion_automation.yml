@@ -2,7 +2,7 @@ name: Notion Automation
 
 on:
   schedule:
-    - cron: '0 7 * * *'  # Runs every day at 5am UTC
+    - cron: '0 7 * * *'  # Runs at 5am UTC daily
 
 jobs:
   run-script:
@@ -16,4 +16,8 @@ jobs:
       - name: Install dependencies
         run: pip install notion-client
       - name: Run script
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          DAILY_DB_ID: ${{ secrets.DAILY_DB_ID }}
+          WEEKLY_DB_ID: ${{ secrets.WEEKLY_DB_ID }}
         run: python notion_automation.py
