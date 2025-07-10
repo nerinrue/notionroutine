@@ -16,6 +16,7 @@ jobs:
       - name: Install dependencies
         run: pip install notion-client
       - name: Run script
+        run: python notion_automation.py
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
           DAILY_DB_ID: ${{ secrets.DAILY_DB_ID }}
