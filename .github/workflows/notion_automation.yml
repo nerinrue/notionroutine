@@ -1,0 +1,19 @@
+name: Notion Automation
+
+on:
+  schedule:
+    - cron: '0 7 * * *'  # Runs every day at 5am UTC
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Install dependencies
+        run: pip install notion-client
+      - name: Run script
+        run: python notion_automation.py
