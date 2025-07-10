@@ -21,4 +21,4 @@ jobs:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
           DAILY_DB_ID: ${{ secrets.DAILY_DB_ID }}
           WEEKLY_DB_ID: ${{ secrets.WEEKLY_DB_ID }}
-        run: python notion_automation.py
+      
