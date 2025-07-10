@@ -2,9 +2,9 @@ import os
 from datetime import datetime, timedelta
 from notion_client import Client
 
-NOTION_TOKEN = "your-integration-token"
-DAILY_DB_ID = "your-daily-database-id"
-WEEKLY_DB_ID = "your-weekly-database-id"
+NOTION_TOKEN = "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"
+DAILY_DB_ID = "22a37ea6680f80d3bfccd5c1e86a5d58"
+WEEKLY_DB_ID = "22c37ea6680f807faf8ee351a1845823"
 
 notion = Client(auth=NOTION_TOKEN)
 
