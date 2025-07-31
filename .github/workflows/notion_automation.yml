@@ -21,4 +21,5 @@ jobs:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
           DAILY_DB_ID: ${{ secrets.DAILY_DB_ID }}
           WEEKLY_DB_ID: ${{ secrets.WEEKLY_DB_ID }}
+          DATABASE_ID: ${{ secrets.DATABASE_ID }}
       
